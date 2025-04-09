@@ -1,0 +1,15 @@
+# Ignora binarios y carpetas temporales
+bin/
+obj/
+.vscode/
+.vs/
+TestResults/
+
+# Ignora archivos de usuario de VS
+*.user
+*.suo
+*.csproj.user
+
+# Otros
+.env
+*.db

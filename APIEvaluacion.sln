@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIEvaluacion", "APIEvaluacion\APIEvaluacion.csproj", "{DB4ADE12-A32C-4C88-B652-A167CC33763C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAPIEvaluacion", "TestAPIEvaluacion\TestAPIEvaluacion.csproj", "{A76F0300-54F7-496C-9411-99BDACFEB646}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB4ADE12-A32C-4C88-B652-A167CC33763C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4ADE12-A32C-4C88-B652-A167CC33763C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4ADE12-A32C-4C88-B652-A167CC33763C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4ADE12-A32C-4C88-B652-A167CC33763C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76F0300-54F7-496C-9411-99BDACFEB646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76F0300-54F7-496C-9411-99BDACFEB646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76F0300-54F7-496C-9411-99BDACFEB646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76F0300-54F7-496C-9411-99BDACFEB646}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBCAABAA-D41E-470F-8F9D-4E5876143C58}
+	EndGlobalSection
+EndGlobal

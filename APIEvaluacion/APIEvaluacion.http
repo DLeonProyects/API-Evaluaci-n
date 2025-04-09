@@ -1,0 +1,6 @@
+@APIEvaluacion_HostAddress = http://localhost:5065
+
+GET {{APIEvaluacion_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
