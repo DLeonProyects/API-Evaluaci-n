@@ -4,10 +4,12 @@ Este proyecto es una API RESTful desarrollada en **.NET 8** como parte de una pr
 
 La API permite:
 - ✅ Registro de usuarios con validaciones avanzadas
-- ✅ Autenticación con JWT
+- ✅ Inicio de sesión (Login) con JWT
 - ✅ Consumo de API externa (JSONPlaceholder) asegurado con token JWT
 - ✅ Pruebas unitarias con xUnit y Moq
 - ✅ Documentación con Swagger
+
+
 
 ---
 
