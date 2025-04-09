@@ -5,7 +5,7 @@ using APIEvaluacion.Helpers;
 using BCrypt.Net;
 using System.IdentityModel.Tokens.Jwt;
 using FluentValidation;
-
+using Microsoft.EntityFrameworkCore;
 
 
 
@@ -71,23 +71,27 @@ namespace APIEvaluacion.Services
         /// Si las credenciales son correctas, devuelve un token JWT.
         public async Task<string> AuthenticateUserAsync(LoginUserDto dto)
         {
-            // Buscar el usuario por correo
-            var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email);
+            // Buscar el usuario por correo de forma asíncrona
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
 
+            // Si no existe, lanzamos excepción genérica para no revelar información sensible
             if (user == null)
             {
                 throw new Exception("Correo o contraseña incorrectos.");
             }
 
-            // Verificar que la contraseña proporcionada coincida
-            if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
+            // Verificar que la contraseña proporcionada coincida con el hash almacenado
+            var passwordIsValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash);
+
+            if (!passwordIsValid)
             {
                 throw new Exception("Correo o contraseña incorrectos.");
             }
 
-            // Generar y devolver token JWT
+            // Generar el token JWT para la sesión del usuario
             var token = _jwtHelper.GenerateJwtToken(user);
 
+            // Devolver el token al frontend
             return token;
         }
 
