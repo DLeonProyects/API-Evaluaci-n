@@ -99,6 +99,7 @@ dotnet test
   "password": "Password123!"
 }
 ```
+- Obtendrás un **token JWT**.
 
 2. **Login de usuario**
    - Endpoint: `POST /api/Users/login`
